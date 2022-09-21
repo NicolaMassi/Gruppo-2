@@ -1,3 +1,5 @@
+//main gruppo 2
+
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
