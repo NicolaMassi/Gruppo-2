@@ -214,23 +214,27 @@ void es22() {
     numeri[i] = rand() % 999;
     cout << numeri[i] << " ";
   }
+  cout << "primo ok";
   cout << endl;
   // divide di 10
   for (int i = 0; i < N; i++) {
     numeriDivisi[i] = trunc(numeri[i] / 10);
     cout << numeriDivisi[i] * 10 << " ";
   }
+  cout << "Secondo passato";
   cout << endl;
   // inserisci i valori
   for (int i = 0; i < N; i++) {
     DEC[numeriDivisi[i]] = DEC[numeriDivisi[i]] + 1;
   }
+  cout<<"terzo passato";
   for (int i = 0; i < 999; i++) {
     if (DEC[i] != 0) {
       j = i * 10;
       cout << j << " " << j + 9 << " " << DEC[i] << endl;
     }
   }
+  cout<<"quarto passato";
 }
 
 void es39() {
@@ -345,19 +349,19 @@ void es43() {
           "rilevate nel mese e stamparla. Si stampino poi i giorni del mese in "
           "cui le temperature sono state inferiori alla media mensile."
        << endl;
-  float media = 0.0;
+  float media = 0;
   int sommaTemperature = 0;
   int temperature[31];
   for (int i = 0; i < 32; i++) {
     temperature[i] = rand() % 15 + 20;
     sommaTemperature = sommaTemperature + temperature[i];
   }
-  media = sommaTemperature / 31;
+   media = float(sommaTemperature) / 31;
   for (int i = 1; i < 32; i++) {
-    if (temperature[i] < media) {
-      cout <<"giorno: " << i <<" "<< temperature[i] << endl;
+   
+      cout <<"giorno:" << i <<" gradi:°"<< temperature[i] << endl;
       
-    }
+    
   }
   cout << "--------------" << endl;
   cout << "la media e': " << media << endl;
