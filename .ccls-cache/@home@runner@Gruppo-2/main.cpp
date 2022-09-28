@@ -250,7 +250,7 @@ void es39() {
   int C[20] = {};
   int resto = 0, posPari = 0, posDispari = 0, posC = 0;
   for (int i = 0; i < n; i++) {
-    A[i] = rand() % 10 + 1;
+    A[i] = rand() % 10;
     B[i] = rand() % 10 + 1;
   }
   cout << "A:\n";
